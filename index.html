@@ -1,0 +1,111 @@
+<html>
+
+<head>
+    <title>MapTrix for many-to-many flow visualisation</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <link rel="stylesheet" type="text/css"
+        href="A.style.css+lib,,_pure-min.css+lib,,_nouislider.min.css,Mcc.0J_xnl3zpQ.css.pagespeed.cf.EURvzeJiVF.css">
+
+
+    <!--<link rel="stylesheet" type="text/css" href="./lib/normalize.css">-->
+
+</head>
+
+<body>
+    <script src="./lib/jquery-1.11.3.min.js"></script>
+
+    <!--d3 related-->
+    <script src="./lib/d3.min.js"></script>
+    <script src="./lib/queue.min.js"></script>
+
+    <!--geo related-->
+    <script src="./lib/topojson.js"></script>
+    <script src="./lib/colorbrewer.v1.min.js"></script>
+    <script src="./lib/javascript.util.min.js"></script>
+    <script src="./lib/jsts.min.js"></script>
+
+    <!--optimization related-->
+    <script src="./lib/munkres.js"></script>
+    <script src="./lib/quadprog.js"></script>
+
+    <!--interaction controller-->
+    <script src="./lib/nouislider.min.js"></script>
+
+    <!--other-->
+    <script src="./lib/Hashtable.js"></script>
+
+    <!--my own code-->
+    <script src="utilities.js"></script>
+    <script src="commonData.js"></script>
+    <script src="commonGeometry.js"></script>
+
+    <script src="Point.js"></script>
+    <script src="Cell.js"></script>
+    <script src="ODData.js"></script>
+    <script src="GeoInfoHelper.js"></script>
+    <script src="MapProjector.js"></script>
+    <script src="BoundaryMapper.js"></script>
+    <script src="LeaderOptimizer.js"></script>
+    <script src="Scales.js"></script>
+    <script src="Connector.js"></script>
+
+    <script src="Matrix.js"></script>
+    <script src="LineMap.js"></script>
+    <script src="MapTrix.js"></script>
+
+    <script src="index.js"></script>
+    <div class="pure-22">胡靖昊已经成的修改了这个网页，哈哈哈哈哈哈哈哈！！！！！！</div></div></div>
+    <div class="pure-g">
+        <div class="pure-u-2-24">
+            <div class="pure-g">
+                <div class="pure-u-1-2">
+                    <svg id="totalOutFlowLegend">
+                    </svg>
+                </div>
+                <div class="sliders pure-u-1-2" id="totalOutFlow"></div>
+            </div>
+            <div>
+                <div class="pure-u-1-2">
+                    <svg id="totalInFlowLegend">
+                    </svg>
+                </div>
+                <div class="sliders pure-u-1-2" id="totalInFlow"></div>
+            </div>
+        </div>
+
+
+        <div class="pure-u-20-24">
+            <svg id="vis">
+                <defs>
+                    <marker id="arrow-head-one" orient="auto" refX="8" viewBox="0 -4 8 8" markerWidth="5"
+                        markerHeight="5">
+                        <path id="arrow-path" d="M0,-4L8,0L0,4" class="flow-line-arrow"></path>
+                    </marker>
+
+                    <marker id="arrow-head-two" orient="auto" refX="5" viewBox="0 -4 8 8" markerWidth="5"
+                        markerHeight="5">
+                        <path d="M0,-4L8,0L0,4" class="fill-color-two"></path>
+                    </marker>
+                </defs>
+            </svg>
+        </div>
+
+        <div class="pure-u-1-24">
+            <div class="pure-u-1-2">
+                <svg id="singleFlowLegend">
+                </svg>
+            </div>
+            <div class="sliders pure-u-1-2" id="singleFlow"></div>
+        </div>
+
+    </div>
+
+    <div style="text-align: center; margin: 0" id="divBt">
+        <p>Hold the "shift" key and click the locations you want to group. Release "shift" key to select another group.
+        </p>
+        <button id="btGroup" class="pure-button pure-button-primary">Group Selected Areas</button>
+    </div>
+
+</body>
+
+</html>
